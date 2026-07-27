@@ -5,24 +5,47 @@ RiskGuardian Pro est une solution logicielle conçue pour assister les analystes
 
 ---
 
-### Liens utiles
-* **Démonstration interactive (Streamlit) :** https://riskguardian-pro.streamlit.app
-* **Dépôt du code source (GitHub) :** https://github.com/votre-nom/riskguardian-pro
+### Liens d'accès
 
----
-
-## Architecture et Fonctionnalités
-
-| Module | Description technique |
+| Ressource | Lien direct |
 | :--- | :--- |
-| **Audit Transactionnel** | Simulation temps réel de profils financiers (comptes normaux, schémas de smurfing, comptes de transit) et calcul du score de risque. |
-| **Explicabilité (XGBoost et SHAP)** | Décomposition de la contribution de chaque variable (dépôts d'espèces, opérations sous le seuil légal, ratios de rétention) au score global. |
-| **Suivi de Performance (MLOps)** | Évaluation du modèle via matrice de confusion, métriques ROC-AUC et importance des variables. |
-| **Registre et Traçabilité SQL** | Archivage local des décisions d'audit dans une base de données SQLite pour contrôle de conformité. |
+| **Démonstration interactive** | [Ouvrir l'application Streamlit](https://riskguardian-pro-cnbntyjnydvruzjhv2atdc.streamlit.app/) |
+| **Code source du projet** | [Consulter le dépôt GitHub](https://github.com/ayaassas/riskguardian-pro) |
 
 ---
 
-## Technologies Utilisées
+## Architecture et Modules Métier
+
+<table width="100%">
+  <thead>
+    <tr>
+      <th align="left" width="30%">Module</th>
+      <th align="left" width="70%">Description fonctionnelle et technique</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Audit Transactionnel</b></td>
+      <td>Simulation en temps réel de profils financiers (comptes normaux, schémas de smurfing, comptes de transit) et évaluation instantanée du score de risque.</td>
+    </tr>
+    <tr>
+      <td><b>Explicabilité IA (XGBoost et SHAP)</b></td>
+      <td>Décomposition fine de la contribution de chaque variable (dépôts d'espèces, opérations sous le seuil légal, ratios de rétention) au calcul du risque.</td>
+    </tr>
+    <tr>
+      <td><b>Suivi de Performance (MLOps)</b></td>
+      <td>Supervision de la qualité du modèle via matrice de confusion, métriques ROC-AUC et classement de l'importance des variables.</td>
+    </tr>
+    <tr>
+      <td><b>Registre et Traçabilité SQL</b></td>
+      <td>Archivage et historique des décisions d'audit dans une base de données SQLite pour contrôle de conformité.</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## Stack Technique
 
 * **Traitement et Analyse :** Python 3.10+, Pandas, NumPy
 * **Modélisation et Interprétabilité :** XGBoost, SHAP, Scikit-Learn
@@ -34,8 +57,8 @@ RiskGuardian Pro est une solution logicielle conçue pour assister les analystes
 ## Installation et Exécution Locale
 
 ```bash
-# Clone du dépôt
-git clone [https://github.com/votre-nom/riskguardian-pro.git](https://github.com/votre-nom/riskguardian-pro.git)
+# Clonage du dépôt
+git clone [https://github.com/ayaassas/riskguardian-pro.git](https://github.com/ayaassas/riskguardian-pro.git)
 cd riskguardian-pro
 
 # Installation des dépendances
