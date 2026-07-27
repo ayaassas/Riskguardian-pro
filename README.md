@@ -1,19 +1,45 @@
-# 🛡️ RiskGuardian Pro — AML / LCB-FT Intelligence Platform
+# RiskGuardian Pro
+> Plateforme décisionnelle MLOps & Explicabilité pour la conformité LCB-FT / AML
 
-**RiskGuardian Pro** est une application d'aide à la décision dédiée à la lutte contre le blanchiment d'argent et le financement du terrorisme (LCB-FT). 
-
-🚀 **Tester l'application en direct :** [Cliquez ici pour ouvrir l'application](https://TON-LIEN-STREAMLIT.streamlit.app) *(remplace ce lien par le lien de ton app Streamlit)*
+RiskGuardian Pro est une solution logicielle conçue pour assister les analystes conformité dans la détection du blanchiment d'argent et du financement du terrorisme. L'application combine une architecture de prédiction sous XGBoost, une explicabilité locale et globale via SHAP, ainsi qu'une persistance des données sous SQLite pour garantir la traçabilité des audits.
 
 ---
 
-## 🎯 Fonctionnalités Clés
-- **Audit Transactionnel :** Analyse de profils clients (Client sain, Smurfing, Transit).
-- **Explicabilité IA (SHAP) :** Analyse de la contribution de chaque indicateur au score de risque.
-- **Suivi MLOps :** Matrice de confusion, courbe ROC-AUC et importance des variables.
-- **Registre SQL :** Historisation et traçabilité des décisions sur base SQLite.
+### Liens utiles
+* **Démonstration interactive (Streamlit) :** https://riskguardian-pro.streamlit.app
+* **Dépôt du code source (GitHub) :** https://github.com/votre-nom/riskguardian-pro
 
-## 🛠️ Stack Technique
-- **Python 3.10+**
-- **Machine Learning :** XGBoost, SHAP, Pandas, NumPy
-- **Interface & Dashboard :** Streamlit
-- **Data Engineering :** SQLite
+---
+
+## Architecture & Fonctionnalités
+
+| Module | Description technique |
+| :--- | :--- |
+| **Audit Transactionnel** | Simulation temps réel de profils financiers (comptes normaux, schémas de smurfing, comptes de transit) et calcul du score de risque. |
+| **Explicabilité (XGBoost + SHAP)** | Décomposition de la contribution de chaque variable (dépôts d'espèces, opérations sous le seuil légal, ratios de rétention) au score global. |
+| **Suivi de Performance (MLOps)** | Évaluation du modèle via matrice de confusion, métriques ROC-AUC (0.96) et importance des variables. |
+| **Registre & Traçabilité SQL** | Archivage local des décisions d'audit dans une base de données SQLite pour contrôle de conformité. |
+
+---
+
+## Technologies Utilisées
+
+* **Core & Processing :** Python 3.10+, Pandas, NumPy
+* **Modélisation & Interprétabilité :** XGBoost, SHAP, Scikit-Learn
+* **Interface & Déploiement :** Streamlit, Streamlit Community Cloud
+* **Base de données :** SQLite3
+
+---
+
+## Installation et Exécution Locale
+
+```bash
+# Clone du dépôt
+git clone [https://github.com/votre-nom/riskguardian-pro.git](https://github.com/votre-nom/riskguardian-pro.git)
+cd riskguardian-pro
+
+# Installation des dépendances
+pip install -r requirements.txt
+
+# Lancement de l'application
+python -m streamlit run app.py
